@@ -6,15 +6,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>وظائف متاحة في السعودية</title>
+<title>فرص عمل للسعوديين</title>
 
 <style>
 
 body{
-font-family:Arial;
-background:#f5f5f5;
+font-family:tahoma;
+background:#f3f4f6;
 margin:0;
-padding:20px;
+padding:0;
 }
 
 .container{
@@ -22,44 +22,58 @@ max-width:500px;
 margin:auto;
 background:#fff;
 padding:25px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+margin-top:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 text-align:center;
 }
 
 h1{
-color:#0f766e;
-margin-bottom:10px;
+color:#047857;
 }
 
-p{
-color:#555;
-}
-
-.job{
-background:#f0fdf4;
-border:1px solid #d1fae5;
-padding:12px;
-border-radius:8px;
-margin-top:8px;
-font-size:16px;
+.question{
+font-size:20px;
+margin:20px 0;
 }
 
 .btn{
 display:block;
+width:100%;
+padding:15px;
+margin-top:10px;
+border:none;
+border-radius:10px;
+font-size:18px;
+background:#047857;
+color:#fff;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#065f46;
+}
+
+.hidden{
+display:none;
+}
+
+.cta{
+display:block;
 background:#dc2626;
 color:#fff;
-padding:16px;
-border-radius:10px;
+padding:18px;
+border-radius:12px;
+font-size:20px;
 text-decoration:none;
-font-size:18px;
 margin-top:20px;
 }
 
-.note{
-font-size:13px;
-color:#666;
-margin-top:10px;
+.counter{
+background:#fef3c7;
+padding:10px;
+border-radius:10px;
+margin-top:15px;
 }
 
 </style>
@@ -70,27 +84,80 @@ margin-top:10px;
 
 <div class="container">
 
-<h1>وظائف متاحة حالياً في السعودية</h1>
+<h1>📢 فرص عمل للسعوديين</h1>
 
-<p>اختر الوظيفة المناسبة وابدأ التسجيل الآن</p>
+<div class="counter">
+📈 أكثر من 1200 شخص قدم اليوم
+</div>
 
-<div class="job">سائق</div>
-<div class="job">مدير تسويق</div>
-<div class="job">محاسب</div>
-<div class="job">عامل</div>
-<div class="job">كهربائي</div>
-<div class="job">مندوب مبيعات</div>
-<div class="job">سكرتير</div>
+<div id="step1">
 
-<a href="https://xmaaubb.bid/cl/cefae5a2ebf5f54c?p1={{campaign.name}}&p2={{ad.name}}&source=facebook&site={{site_source_name}}" class="btn" target="_blank">
-ابدأ التسجيل الآن
-</a>
+<div class="question">
+هل أنت مقيم في السعودية؟
+</div>
 
-<p class="note">
-سيتم إرسال كود التفعيل إلى رقم الجوال بعد التسجيل
-</p>
+<button class="btn" onclick="next(2)">نعم</button>
+<button class="btn" onclick="next(2)">لا</button>
 
 </div>
+
+
+<div id="step2" class="hidden">
+
+<div class="question">
+هل عمرك بين 21 و 55 سنة؟
+</div>
+
+<button class="btn" onclick="next(3)">نعم</button>
+<button class="btn" onclick="next(3)">لا</button>
+
+</div>
+
+
+<div id="step3" class="hidden">
+
+<div class="question">
+هل تستخدم رقم جوال سعودي؟
+</div>
+
+<button class="btn" onclick="next(4)">نعم</button>
+<button class="btn" onclick="next(4)">لا</button>
+
+</div>
+
+
+<div id="step4" class="hidden">
+
+<h2 style="color:#047857">
+✅ أنت مؤهل للتسجيل
+</h2>
+
+<p>
+اضغط الزر بالأسفل وأدخل رقم الجوال لاستلام كود التفعيل
+</p>
+
+<a href="https://hisswrpmcm.bid/cl/8968c1da30f5d411" class="cta">
+
+📲 ابدأ التسجيل الآن
+
+</a>
+
+</div>
+
+</div>
+
+
+<script>
+
+function next(step){
+
+document.querySelectorAll("[id^=step]").forEach(el=>el.classList.add("hidden"));
+
+document.getElementById("step"+step).classList.remove("hidden");
+
+}
+
+</script>
 
 </body>
 
